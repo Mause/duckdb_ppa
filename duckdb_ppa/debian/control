@@ -1,0 +1,20 @@
+Source: duckdb
+Section: database
+Priority: optional
+Maintainer: DuckDB Labs <quack@duckdb.org>
+Build-Depends: cmake, g++
+Homepage: https://duckdb.org
+
+Package: duckdb
+Architecture: any
+Description: DuckDB is an embeddable SQL OLAP database management system
+ DuckDB is an embeddable SQL OLAP database management system. It is designed to
+ be easy to install, with no external dependencies, and optimized for fast
+ query performance. DuckDB is designed to be used as an embedded database, and
+ is well-suited for data analysis tasks.
+ .
+ DuckDB is written in C++ and provides a SQL interface. It is designed to
+ provide high performance on analytical workloads, and is especially well-suited
+ for read-heavy workloads. DuckDB is designed to be easy to install and use, and
+ is designed to be used as an embedded database.
+

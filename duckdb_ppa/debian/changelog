@@ -1,0 +1,6 @@
+duckdb (0.10.0) jammy; urgency=low
+
+  * the world was created in 7 days, but it took 0.01s to create the database
+
+ -- Elliana May <me@mause.me>  Sat, 17 Feb 2024 12:00:00 +0000
+
