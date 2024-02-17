@@ -1,3 +1,9 @@
+duckdb (0.10.0-2) jammy; urgency=low
+
+  * add actual source code
+
+ -- Elliana May <me@mause.me>  Sat, 17 Feb 2024 21:50:00 +0800
+
 duckdb (0.10.0-1) jammy; urgency=low
 
   * include cmake tooling

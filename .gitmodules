@@ -1,0 +1,3 @@
+[submodule "duckdb_ppa/duckdb"]
+	path = duckdb_ppa/duckdb
+	url = https://github.com/duckdb/duckdb
