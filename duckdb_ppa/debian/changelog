@@ -1,3 +1,9 @@
+duckdb (0.10.0-1) jammy; urgency=low
+
+  * include cmake tooling
+
+ -- Elliana May <me@mause.me>  Sat, 17 Feb 2024 21:26:00 +0800
+
 duckdb (0.10.0) jammy; urgency=low
 
   * the world was created in 7 days, but it took 0.01s to create the database
