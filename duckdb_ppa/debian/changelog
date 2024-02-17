@@ -1,3 +1,9 @@
+duckdb (0.10.0-4) jammy; urgency=low
+
+  * try with full path
+
+ -- Elliana May <me@mause.me>  Sat, 17 Feb 2024 23:51:00 +0800
+
 duckdb (0.10.0-3) jammy; urgency=low
 
   * try with ninja
