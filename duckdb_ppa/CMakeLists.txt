@@ -1,3 +1,3 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.20)
 include(ExternalProject)
 ExternalProject_Add(duckdb SOURCE_DIR ${CMAKE_SOURCE_DIR}/duckdb)
