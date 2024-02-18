@@ -15,4 +15,4 @@ jobs:
     - run: sudo apt install devscripts
 
     - working-directory: duckdb_ppa
-      run: debuild
+      run: dpkg-buildpackage
