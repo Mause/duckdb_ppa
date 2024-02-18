@@ -12,6 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: configure
-      working-directory: duckdb_ppa
+    - run: apt install devscripts
+
+    - working-directory: duckdb_ppa
       run: debuild
