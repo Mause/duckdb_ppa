@@ -10,14 +10,14 @@ Description: DuckDB is an embeddable SQL OLAP database management system
 Package: libduckdb
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: ${source:Description}
+Description: ${source:Synopsis}
 
 Package: libduckdb-dev
 Architecture: any
 Depends: libduckdb (= ${binary:Version}), ${misc:Depends}
-Description: ${source:Description}
+Description: ${source:Synopsis}
 
 Package: duckdb
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: ${source:Description}
+Description: ${source:Synopsis}
