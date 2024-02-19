@@ -1,3 +1,9 @@
+duckdb (0.10.0-6) jammy; urgency=low
+
+  * tweak cmake config
+
+ -- Elliana May <me@mause.me>  Mon, 19 Feb 2024 09:57:00 +0800
+
 duckdb (0.10.0-5) jammy; urgency=low
 
   * try with full path
