@@ -1,3 +1,9 @@
+duckdb (0.10.0-11) jammy; urgency=medium
+
+  * skip install and test with ExternalProject_Add
+
+ -- Elliana May <me@mause.me>  Mon, 19 Feb 2024 18:17:12 +0800
+
 duckdb (0.10.0-10) jammy; urgency=medium
 
   * directly invoke cmake

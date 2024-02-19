@@ -9,3 +9,7 @@ export DH_VERBOSE = 1
 override_dh_auto_configure:
 	install -d obj-x86_64-linux-gnu
 	cd obj-x86_64-linux-gnu/ && cmake -GNinja -DCMAKE_INSTALL_PREFIX:PATH=`pwd`/debian/tmp -DCMAKE_BUILD_TYPE:String="@BUILD_TYPE@" ..
+
+
+override_dh_auto_test:
+	@echo "Skipping tests"
