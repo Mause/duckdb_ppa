@@ -1,3 +1,15 @@
+duckdb (0.10.0-10) jammy; urgency=medium
+
+  * directly invoke cmake
+
+ -- Elliana May <me@mause.me>  Mon, 19 Feb 2024 15:57:19 +0800
+
+duckdb (0.10.0-9) jammy; urgency=medium
+
+  * try to fix version issue
+
+ -- Elliana May <me@mause.me>  Mon, 19 Feb 2024 14:44:30 +0800
+
 duckdb (0.10.0-8) jammy; urgency=low
 
   * just manually override CMAKE_INSTALL_PREFIX
