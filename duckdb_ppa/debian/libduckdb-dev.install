@@ -1,1 +1,2 @@
-Development
+usr/lib/*/*.so.*
+usr/include

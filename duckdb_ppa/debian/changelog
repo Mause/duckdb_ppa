@@ -1,3 +1,9 @@
+duckdb (0.10.0-7) jammy; urgency=low
+
+  * correct install files
+
+ -- Elliana May <me@mause.me>  Mon, 19 Feb 2024 11:33:00 +0800
+
 duckdb (0.10.0-6) jammy; urgency=low
 
   * tweak cmake config
