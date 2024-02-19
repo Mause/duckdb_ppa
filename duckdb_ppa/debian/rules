@@ -7,7 +7,7 @@ export DH_VERBOSE = 1
 
 
 override_dh_auto_configure:
-	$(eval ARCH = $(shell dpkg-architecture -qDEB_HOST_ARCH))
+	$(eval ARCH = $(shell dpkg-architecture -qDEB_TARGET_GNU_CPU))
 	install -d "obj-$(ARCH)-linux-gnu"
 	cd "obj-$(ARCH)-linux-gnu/" && cmake -GNinja -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_BUILD_TYPE:String="None" ../duckdb
 
