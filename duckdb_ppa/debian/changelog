@@ -1,3 +1,9 @@
+duckdb (0.10.0-12) jammy; urgency=medium
+
+  * refer to duckdb cmake project directly
+
+ -- Elliana May <me@mause.me>  Mon, 19 Feb 2024 18:37:14 +0800
+
 duckdb (0.10.0-11) jammy; urgency=medium
 
   * skip install and test with ExternalProject_Add
