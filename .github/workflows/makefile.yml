@@ -18,7 +18,9 @@ jobs:
         fetch-depth: 0
         submodules: recursive
 
-    - run: sudo apt install devscripts ninja-build cmake dh-cmake
+    - run: sudo apt install devscripts ninja-build build-essential cmake dh-cmake
+
+    - run: wget https://api.github.com/repos/duckdb/duckdb/tarball/refs/tags/v0.10.0 -O duckdb-0.10.0.orig.tar.gz
 
     - uses: Mozilla-Actions/sccache-action@v0.0.4
             
