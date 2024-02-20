@@ -37,9 +37,8 @@ jobs:
         dpkg-source --commit
 
     - name: dpkg-buildpackage
-      run: |
-        cd duckdb-*
-        dpkg-buildpackage
+      working-directory: duckdb-${{ matrix.duckdb_version }}
+      run: dpkg-buildpackage -us -uc -b
       env:
         DEB_BUILD_OPTIONS: "parallel=5 sccache"
 
@@ -49,4 +48,3 @@ jobs:
     - run: duckdb --version
 
     # - run: man duckdb
-
