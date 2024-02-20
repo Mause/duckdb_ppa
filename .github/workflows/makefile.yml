@@ -31,6 +31,9 @@ jobs:
     - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
       working-directory: duckdb-${{ matrix.duckdb_version }}
 
+    - run: dpkg-source --before-build .
+      working-directory: duckdb-${{ matrix.duckdb_version }}
+
     - run: dpkg-buildpackage -us -uc -b
       working-directory: duckdb-${{ matrix.duckdb_version }}
 
