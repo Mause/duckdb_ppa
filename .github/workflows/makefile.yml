@@ -31,8 +31,9 @@ jobs:
     - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
       working-directory: duckdb_ppa
 
-    - working-directory: duckdb_ppa
-      run: dpkg-buildpackage
+    - run: |
+        cd duckdb-*
+        dpkg-buildpackage
       env:
         DEB_BUILD_OPTIONS: "parallel=5 sccache"
 
