@@ -29,7 +29,10 @@ jobs:
     - uses: Mozilla-Actions/sccache-action@v0.0.4
             
     - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
-      working-directory: duckdb_ppa
+      working-directory: duckdb-${{ matrix.duckdb_version }}
+
+    - run: dpkg-buildpackage -us -uc -b
+      working-directory: duckdb-${{ matrix.duckdb_version }}
 
     - name: dpkg-source
       run: |
