@@ -4,3 +4,4 @@
 *.deb
 *.dsc
 *.build
+*.ppa.upload
