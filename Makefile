@@ -6,13 +6,13 @@ all:
 
 bump:
 	git add -p
-	dch -D jammy
+	cd duckdb_ppa && dch -D jammy
 	git add -p
-	debcommit
+	cd duckdb_ppa && debcommit
 
 
-doc/man/duckdb.1: doc/man/duckdb.1.md
-	ronn --roff doc/man/duckdb.1.md --organization "DuckDB Labs"
+doc/man/duckdb.1: duckdb.1.md
+	ronn --roff duckdb.1.md --output duckdb_ppa/doc/man/ --organization "DuckDB Labs"
 
 
 docs: doc/man/duckdb.1
