@@ -24,14 +24,16 @@ jobs:
 
     - run: sudo apt install devscripts ninja-build build-essential cmake dh-cmake
 
+    - uses: Mozilla-Actions/sccache-action@v0.0.4
+
     - run: wget https://api.github.com/repos/duckdb/duckdb/tarball/refs/tags/v${{ matrix.duckdb_version }} -O duckdb_${{ matrix.duckdb_version }}.orig.tar.gz
 
-    - uses: Mozilla-Actions/sccache-action@v0.0.4
-            
-    - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
-      working-directory: duckdb-${{ matrix.duckdb_version }}
+    - run: tar xvf duckdb_${{ matrix.duckdb_version }}.orig.tar.gz
 
     - run: dpkg-source --before-build .
+      working-directory: duckdb-${{ matrix.duckdb_version }}
+
+    - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
       working-directory: duckdb-${{ matrix.duckdb_version }}
 
     - run: dpkg-buildpackage -us -uc -b
