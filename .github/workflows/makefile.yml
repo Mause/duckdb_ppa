@@ -31,7 +31,13 @@ jobs:
     - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
       working-directory: duckdb_ppa
 
-    - run: |
+    - name: dpkg-source
+      run: |
+        cd duckdb-*
+        dpkg-source --commit
+
+    - name: dpkg-buildpackage
+      run: |
         cd duckdb-*
         dpkg-buildpackage
       env:
