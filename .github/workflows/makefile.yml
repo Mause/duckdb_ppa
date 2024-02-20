@@ -28,7 +28,7 @@ jobs:
 
     - run: wget https://api.github.com/repos/duckdb/duckdb/tarball/refs/tags/v${{ matrix.duckdb_version }} -O duckdb_${{ matrix.duckdb_version }}.orig.tar.gz
 
-    - run: tar xvf duckdb_${{ matrix.duckdb_version }}.orig.tar.gz
+    - run: tar xvf duckdb_${{ matrix.duckdb_version }}.orig.tar.gz -C duckdb-${{ matrix.duckdb_version }} --strip-components=1
 
     - run: dpkg-source --before-build .
       working-directory: duckdb-${{ matrix.duckdb_version }}
