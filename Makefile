@@ -12,7 +12,7 @@ bump:
 
 
 doc/man/duckdb.1: duckdb.1.md
-	ronn --roff duckdb.1.md --output duckdb_ppa/doc/man/ --organization "DuckDB Labs"
+	ronn --roff --html duckdb.1.md --output duckdb-0.10.0/doc/man/ --organization "DuckDB Labs"
 
 
 docs: doc/man/duckdb.1
