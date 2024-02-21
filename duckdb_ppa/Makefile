@@ -3,8 +3,8 @@ all:
 
 bump:
 	git add -p
-	dch -D jammy
-	git add -p
+	dch --distribution jammy --upstream
+	git add debian/changelog
 	debcommit
 
 deb:
