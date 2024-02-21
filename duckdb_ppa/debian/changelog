@@ -1,3 +1,9 @@
+duckdb (0.10.0-18) jammy; urgency=medium
+
+  * fix up contents of dev package
+
+ -- Elliana May <me@mause.me>  Wed, 21 Feb 2024 23:22:05 +0800
+
 duckdb (0.10.0-17) jammy; urgency=medium
 
   * correct variable name
