@@ -31,7 +31,7 @@ jobs:
       env:
         DEB_BUILD_OPTIONS: sccache
 
-    - run: sudo dpkg -i *.deb
+    - run: sudo dpkg -i duckdb_0.10.0-*.deb
 
     - run: duckdb --version
 
