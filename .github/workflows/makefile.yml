@@ -18,6 +18,7 @@ jobs:
     - run: sudo apt install devscripts ninja-build cmake dh-cmake
 
     - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
+      working-directory: duckdb_ppa
 
     - working-directory: duckdb_ppa
       run: dpkg-buildpackage
