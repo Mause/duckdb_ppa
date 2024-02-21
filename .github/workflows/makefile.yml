@@ -30,19 +30,8 @@ jobs:
 
     - run: tar xvf duckdb_${{ matrix.duckdb_version }}.orig.tar.gz -C duckdb-${{ matrix.duckdb_version }} --strip-components=1
 
-    - run: dpkg-source --before-build .
-      working-directory: duckdb-${{ matrix.duckdb_version }}
-
     - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
       working-directory: duckdb-${{ matrix.duckdb_version }}
-
-    - run: dpkg-buildpackage -us -uc -b
-      working-directory: duckdb-${{ matrix.duckdb_version }}
-
-    - name: dpkg-source
-      run: |
-        cd duckdb-*
-        dpkg-source --commit
 
     - name: dpkg-buildpackage
       working-directory: duckdb-${{ matrix.duckdb_version }}
