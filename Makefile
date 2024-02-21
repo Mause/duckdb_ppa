@@ -1,8 +1,14 @@
-.PHONY: all bump docs deb
+.PHONY: all bump docs deb source_deb setup
 
 
 all:
 	@echo No.
+
+
+setup:
+	uscan --force-download --debug || echo "uscan failed"
+	tar xvf duckdb_0.10.0.orig.tar.gz
+
 
 bump:
 	git add -p
