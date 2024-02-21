@@ -2,6 +2,7 @@
 *.buildinfo
 *.changes
 *.deb
+*.ddeb
 *.dsc
 *.build
 *.ppa.upload
