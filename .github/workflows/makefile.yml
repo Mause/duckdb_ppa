@@ -20,7 +20,7 @@ jobs:
     - working-directory: duckdb_ppa
       run: dpkg-buildpackage
 
-    - run: dpkg -i *.deb
+    - run: sudo dpkg -i *.deb
 
     - run: duckdb --version
 
