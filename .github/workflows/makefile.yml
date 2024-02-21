@@ -29,3 +29,10 @@ jobs:
       run: dpkg-buildpackage
       env:
         DEB_BUILD_OPTIONS: "parallel=5 sccache"
+
+
+    - run: sudo dpkg -i duckdb_0.10.0-*.deb
+
+    - run: duckdb --version
+
+    # - run: man duckdb
