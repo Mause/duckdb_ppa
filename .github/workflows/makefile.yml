@@ -7,6 +7,10 @@ on:
 jobs:
   build:
 
+    strategy:
+      matrix:
+        duckdb_version: ['0.10.0']
+
     runs-on: ubuntu-latest
 
     env:
@@ -18,15 +22,18 @@ jobs:
         fetch-depth: 0
         submodules: recursive
 
-    - run: sudo apt install devscripts ninja-build cmake dh-cmake
+    - run: sudo apt install devscripts ninja-build build-essential cmake dh-cmake
 
     - uses: Mozilla-Actions/sccache-action@v0.0.4
-            
-    - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
-      working-directory: duckdb_ppa
 
-    - working-directory: duckdb_ppa
-      run: dpkg-buildpackage
+    - run: make setup
+
+    - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
+      working-directory: duckdb-${{ matrix.duckdb_version }}
+
+    - name: dpkg-buildpackage
+      working-directory: duckdb-${{ matrix.duckdb_version }}
+      run: dpkg-buildpackage -us -uc -b
       env:
         DEB_BUILD_OPTIONS: "parallel=5 sccache"
 

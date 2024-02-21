@@ -2,5 +2,10 @@
 *.buildinfo
 *.changes
 *.deb
+*.ddeb
 *.dsc
 *.build
+*.ppa.upload
+
+duckdb-0.10.0/*
+!duckdb-0.10.0/debian

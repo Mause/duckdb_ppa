@@ -1,0 +1,108 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ duckdb (0.10.0-19) jammy; urgency=medium
+ .
+   * fix man page formatting
+Author: Elliana May <me@mause.me>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2024-02-20
+
+--- duckdb-0.10.0.orig/doc/man/duckdb.1
++++ duckdb-0.10.0/doc/man/duckdb.1
+@@ -1,12 +1,75 @@
+ .\" generated with Ronn-NG/v0.10.1
+ .\" http://github.com/apjanke/ronn-ng/tree/0.10.1
+ .TH "DUCKDB" "1" "February 2024" "DuckDB Labs"
+-.SH "NAME"
+-\fBduckdb\fR
+-.SH "DUCKDB"
+ DuckDB is an SQL OLAP management system
++.SH "USAGE"
++FILENAME is the name of an DuckDB database\. A new database is created if the file does not previously exist\.
++.P
++Usage: duckdb \fIOPTIONS\fR FILENAME [SQL]
+ .SH "OPTIONS"
+-.TP
+-\fB\-\-json\fR
+-Output results as json
++.IP "\(bu" 4
++\fB\-append\fR: append the database to the end of the file
++.IP "\(bu" 4
++\fB\-ascii\fR: set output mode to 'ascii'
++.IP "\(bu" 4
++\fB\-bail\fR: stop after hitting an error
++.IP "\(bu" 4
++\fB\-batch\fR: force batch I/O
++.IP "\(bu" 4
++\fB\-box\fR: set output mode to 'box'
++.IP "\(bu" 4
++\fB\-column\fR: set output mode to 'column'
++.IP "\(bu" 4
++\fB\-cmd COMMAND\fR: run "COMMAND" before reading stdin
++.IP "\(bu" 4
++\fB\-c COMMAND\fR: run "COMMAND" and exit
++.IP "\(bu" 4
++\fB\-csv\fR: set output mode to 'csv'
++.IP "\(bu" 4
++\fB\-echo\fR: print commands before execution
++.IP "\(bu" 4
++\fB\-init FILENAME\fR: read/process named file
++.IP "\(bu" 4
++\fB\-[no]header\fR: turn headers on or off
++.IP "\(bu" 4
++\fB\-help\fR: show this message
++.IP "\(bu" 4
++\fB\-html\fR: set output mode to HTML
++.IP "\(bu" 4
++\fB\-interactive\fR: force interactive I/O
++.IP "\(bu" 4
++\fB\-json\fR: set output mode to 'json'
++.IP "\(bu" 4
++\fB\-line\fR: set output mode to 'line'
++.IP "\(bu" 4
++\fB\-list\fR: set output mode to 'list'
++.IP "\(bu" 4
++\fB\-markdown\fR: set output mode to 'markdown'
++.IP "\(bu" 4
++\fB\-newline SEP\fR: set output row separator\. Default: '\en'
++.IP "\(bu" 4
++\fB\-nofollow\fR: refuse to open symbolic links to database files
++.IP "\(bu" 4
++\fB\-no\-stdin\fR: exit after processing options instead of reading stdin
++.IP "\(bu" 4
++\fB\-nullvalue TEXT\fR: set text string for NULL values\. Default ''
++.IP "\(bu" 4
++\fB\-quote\fR: set output mode to 'quote'
++.IP "\(bu" 4
++\fB\-readonly\fR: open the database read\-only
++.IP "\(bu" 4
++\fB\-s COMMAND\fR: run "COMMAND" and exit
++.IP "\(bu" 4
++\fB\-separator SEP\fR: set output column separator\. Default: '|'
++.IP "\(bu" 4
++\fB\-stats\fR: print memory stats before each finalize
++.IP "\(bu" 4
++\fB\-table\fR: set output mode to 'table'
++.IP "\(bu" 4
++\fB\-unredacted\fR: allow printing unredacted secrets
++.IP "\(bu" 4
++\fB\-unsigned\fR: allow loading of unsigned extensions
++.IP "\(bu" 4
++\fB\-version\fR: show DuckDB version
++.IP "" 0

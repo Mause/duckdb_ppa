@@ -1,0 +1,62 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ duckdb (0.10.0-19) jammy; urgency=medium
+ .
+   * fix man page formatting
+Author: Elliana May <me@mause.me>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2024-02-20
+
+--- duckdb-0.10.0.orig/CMakeLists.txt
++++ duckdb-0.10.0/CMakeLists.txt
+@@ -292,7 +292,7 @@ endif()
+ 
+ string(REGEX MATCH ".*dev.*" DUCKDB_EXTENSION_FOLDER_IS_VERSION "${DUCKDB_VERSION}")
+ 
+-if(DUCKDB_EXTENSION_FOLDER_IS_VERSION AND DEFINED GIT_COMMIT_HASH)
++if(DUCKDB_EXTENSION_FOLDER_IS_VERSION AND NOT GIT_COMMIT_HASH STREQUAL "")
+   set(DUCKDB_NORMALIZED_VERSION "${GIT_COMMIT_HASH}")
+ else()
+   set(DUCKDB_NORMALIZED_VERSION "${DUCKDB_VERSION}")
+@@ -304,6 +304,10 @@ else()
+   set(EXTENSION_POSTFIX "duckdb_extension")
+ endif()
+ 
++if (NOT DEFINED DUCKDB_NORMALIZED_VERSION)
++  message(FATAL_ERROR "DUCKDB_NORMALIZED_VERSION not defined")
++endif()
++
+ message(STATUS "git hash ${GIT_COMMIT_HASH}, version ${DUCKDB_VERSION}, extension folder ${DUCKDB_NORMALIZED_VERSION}")
+ 
+ option(AMALGAMATION_BUILD
+--- /dev/null
++++ duckdb-0.10.0/doc/man/duckdb.1
+@@ -0,0 +1,12 @@
++.\" generated with Ronn-NG/v0.10.1
++.\" http://github.com/apjanke/ronn-ng/tree/0.10.1
++.TH "DUCKDB" "1" "February 2024" "DuckDB Labs"
++.SH "NAME"
++\fBduckdb\fR
++.SH "DUCKDB"
++DuckDB is an SQL OLAP management system
++.SH "OPTIONS"
++.TP
++\fB\-\-json\fR
++Output results as json
++

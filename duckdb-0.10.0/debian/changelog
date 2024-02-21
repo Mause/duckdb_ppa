@@ -1,8 +1,26 @@
-duckdb (0.10.0-18) jammy; urgency=medium
+duckdb (0.10.0-21) jammy; urgency=medium
+
+  * fix files
+
+ -- Elliana May <me@mause.me>  Wed, 21 Feb 2024 23:43:49 +0800
+
+duckdb (0.10.0-20) jammy; urgency=medium
 
   * fix up contents of dev package
 
  -- Elliana May <me@mause.me>  Wed, 21 Feb 2024 23:22:05 +0800
+
+duckdb (0.10.0-19) jammy; urgency=medium
+
+  * fix man page formatting
+
+ -- Elliana May <me@mause.me>  Tue, 20 Feb 2024 13:58:20 +0800
+
+duckdb (0.10.0-18) jammy; urgency=medium
+
+  * add basic man page
+
+ -- Elliana May <me@mause.me>  Tue, 20 Feb 2024 11:54:51 +0800
 
 duckdb (0.10.0-17) jammy; urgency=medium
 
