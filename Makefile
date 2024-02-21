@@ -6,9 +6,9 @@ all:
 
 bump:
 	git add -p
-	cd duckdb_ppa && dch --distribution jammy --upstream
-	git add duckdb_ppa/debian/changelog
-	cd duckdb_ppa && debcommit
+	cd duckdb-0.10.0 && dch --distribution jammy --upstream
+	git add duckdb-0.10.0/debian/changelog
+	cd duckdb-0.10.0 && debcommit
 
 
 doc/man/duckdb.1: duckdb.1.md
@@ -24,5 +24,5 @@ deb:
 
 
 source_deb:
-	debuild -S -sa
+	cd duckdb-0.10.0 && debuild -S -sa
 
