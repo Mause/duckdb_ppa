@@ -17,8 +17,16 @@ jobs:
 
     - run: sudo apt install devscripts ninja-build cmake dh-cmake
 
+    - name: Setup Ccache
+      uses: hendrikmuhs/ccache-action@main
+      with:
+        variant: sccache
+        key: ${{ github.job }}
+
     - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
       working-directory: duckdb_ppa
 
     - working-directory: duckdb_ppa
       run: dpkg-buildpackage
+      env:
+        DEB_BUILD_OPTIONS: sccache
