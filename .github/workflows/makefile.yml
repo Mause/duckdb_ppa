@@ -9,6 +9,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      SCCACHE_GHA_ENABLED: "true"
+
     steps:
     - uses: actions/checkout@v4
       with:
@@ -17,19 +20,16 @@ jobs:
 
     - run: sudo apt install devscripts ninja-build cmake dh-cmake
 
-    - name: Setup Ccache
-      uses: hendrikmuhs/ccache-action@main
-      with:
-        variant: sccache
-        key: ${{ github.job }}
-
+    - uses: Mozilla-Actions/sccache-action@v0.0.4
+            
     - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
       working-directory: duckdb_ppa
 
     - working-directory: duckdb_ppa
       run: dpkg-buildpackage
       env:
-        DEB_BUILD_OPTIONS: sccache
+        DEB_BUILD_OPTIONS: "parallel=5 sccache"
+
 
     - run: sudo dpkg -i duckdb_0.10.0-*.deb
 
