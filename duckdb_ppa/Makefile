@@ -9,5 +9,8 @@ bump:
 
 deb:
 	dpkg-buildpackage -us -uc -b
-	# debuild -S -sa
+
+
+source_deb:
+	debuild -S -sa
 
