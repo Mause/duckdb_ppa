@@ -13,9 +13,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    env:
-      SCCACHE_GHA_ENABLED: "true"
-
     steps:
     - uses: actions/checkout@v4
       with:
@@ -24,7 +21,11 @@ jobs:
 
     - run: sudo apt install devscripts ninja-build build-essential cmake dh-cmake
 
-    - uses: Mozilla-Actions/sccache-action@v0.0.4
+    - name: Setup Ccache
+      uses: hendrikmuhs/ccache-action@main
+      with:
+        variant: sccache
+        key: ${{ github.job }}
 
     - run: make setup
 
