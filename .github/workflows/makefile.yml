@@ -37,9 +37,13 @@ jobs:
       env:
         DEB_BUILD_OPTIONS: "parallel=5 sccache"
 
-
     - run: sudo dpkg -i *.deb
 
     - run: duckdb --version
 
     # - run: man duckdb
+
+    - uses: actions/upload-artifacts@v4
+      with:
+        path: duckdb-0.10.0-*
+
