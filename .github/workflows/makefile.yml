@@ -45,5 +45,5 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        path: duckdb-0.10.0-*
+        path: duckdb_${{ matrix.duckdb_version }}-*
 
