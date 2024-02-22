@@ -33,7 +33,7 @@ jobs:
 
     - name: dpkg-buildpackage
       working-directory: duckdb-${{ matrix.duckdb_version }}
-      run: dpkg-buildpackage -us -uc -b
+      run: dpkg-buildpackage --unsigned-source --unsigned-changes --unsigned-buildinfo --build=binary
       env:
         DEB_BUILD_OPTIONS: "parallel=5 sccache"
 
@@ -43,7 +43,9 @@ jobs:
 
     # - run: man duckdb
 
+    - run: ls
+
     - uses: actions/upload-artifact@v4
       with:
-        path: duckdb-0.10.0-*
+        path: duckdb_${{ matrix.duckdb_version }}-*
 
