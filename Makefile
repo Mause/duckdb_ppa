@@ -6,6 +6,12 @@ FOLDER = duckdb-$(DUCKDB_VERSION)
 all:
 	@echo No.
 
+clean:
+	rm -f duckdb_$(DUCKDB_VERSION)-*
+	rm -f duckdb_$(DUCKDB_VERSION).orig.tar.gz
+	rm -f '<project>-$(DUCKDB_VERSION).tar.gz'
+	find ./$(FOLDER)/* -maxdepth 0 | grep -v debian | xargs rm -rf
+
 setup:
 	uscan --force-download --debug || echo "uscan failed"
 	tar xvf duckdb_$(DUCKDB_VERSION).orig.tar.gz
