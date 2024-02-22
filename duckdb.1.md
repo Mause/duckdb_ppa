@@ -1,13 +1,16 @@
-# DUCKDB
+duckdb(1) - SQL OLAP management system
+===================================
 
-DuckDB is an SQL OLAP management system
+## SYNOPSIS
 
-## USAGE
+`duckdb` `[OPTIONS]` `FILENAME`
 
 FILENAME is the name of an DuckDB database. A new database is created
 if the file does not previously exist.
 
-Usage: duckdb [OPTIONS] FILENAME [SQL]
+## DESCRIPTION
+
+DuckDB is an SQL OLAP management system
 
 ## OPTIONS
 
