@@ -23,7 +23,7 @@ bump:
 	cd $(FOLDER) && debcommit
 
 doc/man/duckdb.1: duckdb.1.md
-	ronn --roff --html duckdb.1.md --output $(FOLDER)/doc/man/ --organization "DuckDB Labs"
+	ronn --roff duckdb.1.md --output $(FOLDER)/doc/man/ --organization "DuckDB Labs" --manual "User Commands"
 
 docs: doc/man/duckdb.1
 
