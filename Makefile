@@ -14,7 +14,7 @@ clean:
 
 setup:
 	uscan --force-download --debug || echo "uscan failed"
-	tar xvf duckdb_$(DUCKDB_VERSION).orig.tar.gz
+	tar xf duckdb_$(DUCKDB_VERSION).orig.tar.gz
 
 bump:
 	git add -p
