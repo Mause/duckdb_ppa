@@ -60,4 +60,12 @@ jobs:
           libduckdb_${{ matrix.duckdb_version }}*
           libduckdb-dbgsym_${{ matrix.duckdb_version }}*
           duckdb-dbgsym_${{ matrix.duckdb_version }}*
+        name: ${{ matrix.release }}
 
+  merge:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/upload-artifact/merge@v4
+        with:
+          separate-directories: true
