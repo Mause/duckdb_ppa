@@ -1,3 +1,9 @@
+duckdb (0.10.0-22) jammy; urgency=medium
+
+  * amend man
+
+ -- Elliana May <me@mause.me>  Wed, 28 Feb 2024 22:39:37 +0800
+
 duckdb (0.10.0-21) jammy; urgency=medium
 
   * fix files

@@ -1,0 +1,47 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ duckdb (0.10.0-22) jammy; urgency=medium
+ .
+   * amend man
+Author: Elliana May <me@mause.me>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2024-02-28
+
+--- duckdb-0.10.0.orig/doc/man/duckdb.1
++++ duckdb-0.10.0/doc/man/duckdb.1
+@@ -1,11 +1,14 @@
+ .\" generated with Ronn-NG/v0.10.1
+ .\" http://github.com/apjanke/ronn-ng/tree/0.10.1
+-.TH "DUCKDB" "1" "February 2024" "DuckDB Labs"
+-DuckDB is an SQL OLAP management system
+-.SH "USAGE"
+-FILENAME is the name of an DuckDB database\. A new database is created if the file does not previously exist\.
++.TH "DUCKDB" "1" "February 2024" "DuckDB Labs" "User Commands"
++.SH "NAME"
++\fBduckdb\fR \- SQL OLAP management system
++.SH "SYNOPSIS"
++\fBduckdb\fR \fB[OPTIONS]\fR \fBFILENAME\fR
+ .P
+-Usage: duckdb \fIOPTIONS\fR FILENAME [SQL]
++FILENAME is the name of an DuckDB database\. A new database is created if the file does not previously exist\.
++.SH "DESCRIPTION"
++DuckDB is an SQL OLAP management system
+ .SH "OPTIONS"
+ .IP "\(bu" 4
+ \fB\-append\fR: append the database to the end of the file
