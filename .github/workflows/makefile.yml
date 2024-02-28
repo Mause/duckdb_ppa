@@ -35,8 +35,7 @@ jobs:
     - run: dpkg-parsechangelog >> $GITHUB_STEP_SUMMARY
       working-directory: duckdb-${{ matrix.duckdb_version }}
 
-    - name: dpkg-buildpackage
-      working-directory: duckdb-${{ matrix.duckdb_version }}
+    - working-directory: duckdb-${{ matrix.duckdb_version }}
       run: debuild --unsigned-source --unsigned-changes --unsigned-buildinfo --build=binary
       env:
         DEB_BUILD_OPTIONS: "parallel=5 sccache"
@@ -51,5 +50,10 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        path: duckdb_${{ matrix.duckdb_version }}-*
+        path: |
+          duckdb_${{ matrix.duckdb_version }}*
+          libduckdb-dev_${{ matrix.duckdb_version }}*
+          libduckdb_${{ matrix.duckdb_version }}*
+          libduckdb-dbgsym_${{ matrix.duckdb_version }}*
+          duckdb-dbgsym_${{ matrix.duckdb_version }}*
 
