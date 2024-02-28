@@ -37,7 +37,7 @@ jobs:
 
     - name: dpkg-buildpackage
       working-directory: duckdb-${{ matrix.duckdb_version }}
-      run: dpkg-buildpackage --unsigned-source --unsigned-changes --unsigned-buildinfo --build=binary
+      run: debuild --unsigned-source --unsigned-changes --unsigned-buildinfo --build=binary
       env:
         DEB_BUILD_OPTIONS: "parallel=5 sccache"
 
