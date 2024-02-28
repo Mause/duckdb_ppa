@@ -3,8 +3,8 @@ FOLDER = duckdb-$(DUCKDB_VERSION)
 
 .PHONY: all bump docs deb source_deb setup
 
-all:
-	@echo No.
+all: clean setup deb
+	@echo Built.
 
 clean:
 	rm -f duckdb_$(DUCKDB_VERSION)-*
@@ -29,7 +29,7 @@ doc/man/duckdb.1: duckdb.1.md
 docs: doc/man/duckdb.1
 
 deb:
-	dpkg-buildpackage -us -uc -b
+	cd $(FOLDER) && dpkg-buildpackage -us -uc
 
 source_deb:
 	cd $(FOLDER) && debuild -S -sa
