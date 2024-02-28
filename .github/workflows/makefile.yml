@@ -45,7 +45,7 @@ jobs:
 
     - run: duckdb --version
 
-    # - run: man duckdb
+    - run: man duckdb
 
     - run: ls
 
