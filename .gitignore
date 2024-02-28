@@ -9,3 +9,4 @@
 
 duckdb-0.10.0/*
 !duckdb-0.10.0/debian
+duckdb-0.10.0/debian/.debhelper
