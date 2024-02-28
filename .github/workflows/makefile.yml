@@ -50,5 +50,10 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        path: duckdb_${{ matrix.duckdb_version }}-*
+        path: |
+          duckdb_${{ matrix.duckdb_version }}*
+          libduckdb-dev_${{ matrix.duckdb_version }}*
+          libduckdb_${{ matrix.duckdb_version }}*
+          libduckdb-dbgsym_${{ matrix.duckdb_version }}*
+          duckdb-dbgsym_${{ matrix.duckdb_version }}*
 
