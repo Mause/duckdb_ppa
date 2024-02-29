@@ -29,7 +29,7 @@ Last-Update: 2024-02-29
  
    add_library(duckdb SHARED "${PROJECT_SOURCE_DIR}/src/amalgamation/duckdb.cpp")
    target_link_libraries(duckdb ${DUCKDB_SYSTEM_LIBS})
-+  set_target_properties(duckdb PROPERTIES SOVERSION ${DUCKDB_VERSION_MAJOR})
++  set_target_properties(duckdb PROPERTIES VERSION ${DUCKDB_NORMALIZED_VERSION} SOVERSION ${DUCKDB_VERSION_MAJOR})
    link_threads(duckdb)
    link_extension_libraries(duckdb)
  
