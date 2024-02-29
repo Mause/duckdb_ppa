@@ -1,6 +1,7 @@
 duckdb (0.10.0-25) jammy; urgency=medium
 
   * correct soversion location
+  * enable autocomplete extension
 
  -- Elliana May <me@mause.me>  Fri, 01 Mar 2024 02:22:33 +0800
 
