@@ -4,3 +4,4 @@ forget-me
 amend-man
 add-so-version
 override-version-manually
+correct-soversion-location

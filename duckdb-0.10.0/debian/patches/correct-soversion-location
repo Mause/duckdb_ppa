@@ -1,0 +1,39 @@
+Description: correct soversion location
+Author: Elliana May <me@mause.me>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2024-02-29
+
+--- duckdb-0.10.0.orig/src/CMakeLists.txt
++++ duckdb-0.10.0/src/CMakeLists.txt
+@@ -38,7 +38,6 @@ if(AMALGAMATION_BUILD)
+ 
+   add_library(duckdb SHARED "${PROJECT_SOURCE_DIR}/src/amalgamation/duckdb.cpp")
+   target_link_libraries(duckdb ${DUCKDB_SYSTEM_LIBS})
+-  set_target_properties(duckdb PROPERTIES VERSION ${DUCKDB_NORMALIZED_VERSION} SOVERSION ${DUCKDB_VERSION_MAJOR})
+   link_threads(duckdb)
+   link_extension_libraries(duckdb)
+ 
+@@ -89,6 +88,12 @@ else()
+ 
+   add_library(duckdb SHARED ${ALL_OBJECT_FILES})
+   target_link_libraries(duckdb ${DUCKDB_LINK_LIBS})
++  set_target_properties(
++    duckdb
++    PROPERTIES
++      SOVERSION ${DUCKDB_MAJOR_VERSION}
++      VERSION
++      "${DUCKDB_MAJOR_VERSION}.${DUCKDB_MINOR_VERSION}.${DUCKDB_PATCH_VERSION}")
+   link_threads(duckdb)
+   link_extension_libraries(duckdb)
+ 

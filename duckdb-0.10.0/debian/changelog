@@ -1,3 +1,9 @@
+duckdb (0.10.0-25) jammy; urgency=medium
+
+  * correct soversion location
+
+ -- Elliana May <me@mause.me>  Fri, 01 Mar 2024 02:22:33 +0800
+
 duckdb (0.10.0-24) jammy; urgency=medium
 
   * enable additional extensions
