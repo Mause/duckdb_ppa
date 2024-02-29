@@ -1,6 +1,7 @@
 # DuckDB PPA
 
-This is an unoffical and unsupported PPA for the duckdb CLI and shared library (+headers).
+This is an unofficial and unsupported PPA for the duckdb CLI and shared library (+headers).
+Right now, only `jammy` is configured and uploaded.
 
 ```sh
 sudo add-apt-repository ppa:mause-me/duckdb
@@ -8,7 +9,11 @@ sudo apt update
 sudo apt install duckdb libduckdb libduckdb-dev
 ```
 
-currently working to resolve the following errors and warnings:
+You can also see more details on [launchpad](https://launchpad.net/~mause-me/+archive/ubuntu/duckdb/)
+
+## Current issues
+
+I'm currently working to resolve the following errors and warnings:
 
 ```
 E: duckdb: extended-description-is-empty
