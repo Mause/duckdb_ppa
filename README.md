@@ -19,8 +19,5 @@ I'm currently working to resolve the following errors and warnings:
 E: duckdb: extended-description-is-empty
 E: libduckdb: extended-description-is-empty
 E: libduckdb-dev: extended-description-is-empty
-E: libduckdb: lacks-ldconfig-trigger usr/lib/libduckdb.so
-W: duckdb-dbgsym: elf-error In program headers: Unable to find program interpreter name [usr/lib/debug/.build-id/67/0ab54fa42c73c4af46a4794ac1ee7617cfa8d8.debug]
-W: libduckdb: lacks-unversioned-link-to-shared-library usr/lib/libduckdb.so usr/lib/libduckdb.so
-W: libduckdb: shared-library-lacks-version usr/lib/libduckdb.so libduckdb.so
+W: duckdb-dbgsym: elf-error In program headers: Unable to find program interpreter name [usr/lib/debug/.build-id/fe/4c3e6d151417731b83252ba2ef47ad06438b38.debug]
 ```
