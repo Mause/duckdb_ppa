@@ -10,7 +10,7 @@ clean:
 	rm -f duckdb_$(DUCKDB_VERSION)-*
 	rm -f duckdb_$(DUCKDB_VERSION).orig.tar.gz
 	rm -f '<project>-$(DUCKDB_VERSION).tar.gz'
-	find ./$(FOLDER)/* -maxdepth 0 | grep -v debian | xargs rm -rf
+	find ./$(FOLDER)/* -maxdepth 0 | grep -v debian | grep -v '.pc' | xargs rm -rf
 
 setup:
 	uscan --force-download --debug || echo "uscan failed"
