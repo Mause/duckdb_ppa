@@ -1,3 +1,9 @@
+duckdb (0.10.0-27) jammy; urgency=medium
+
+  * add git commit hash again
+
+ -- Elliana May <me@mause.me>  Fri, 01 Mar 2024 22:28:59 +0800
+
 duckdb (0.10.0-26) jammy; urgency=medium
 
   * include all shared objects in package
