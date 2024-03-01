@@ -14,6 +14,11 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: ${source:Synopsis}
 
+Package: libduckdb-static
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ${source:Synopsis}
+
 Package: libduckdb-dev
 Architecture: any
 Depends: libduckdb (= ${binary:Version}), ${misc:Depends}
