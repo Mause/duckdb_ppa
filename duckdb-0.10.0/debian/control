@@ -19,14 +19,17 @@ Description: ${source:Synopsis}
 Package: libduckdb-static
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: ${source:Synopsis}
+Description: Static distribution of DuckDB libraries.
+ ${source:Synopsis}
 
 Package: libduckdb-dev
 Architecture: any
 Depends: libduckdb (= ${binary:Version}), ${misc:Depends}
-Description: ${source:Synopsis}
+Description: Headers for libduckdb.
+ ${source:Synopsis}
 
 Package: duckdb
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: ${source:Synopsis}
+Description: Command line interface for DuckDB.
+ ${source:Synopsis}
