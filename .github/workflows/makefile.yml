@@ -24,11 +24,15 @@ jobs:
         sudo apt update -y
         sudo apt install devscripts ninja-build build-essential cmake dh-cmake
 
+    - uses: taiki-e/install-action@just
+
     - name: Setup Ccache
       uses: hendrikmuhs/ccache-action@main
       with:
         variant: sccache
         key: ${{ github.job }}
+
+    - run: just reversion ${{ matrix.release }}
 
     - run: make setup
 

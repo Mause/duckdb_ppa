@@ -29,3 +29,7 @@ deb DUCKDB_VERSION:
 
 source_deb DUCKDB_VERSION:
 	cd {{FOLDER}} && debuild -S -sa
+
+reversion distro:
+    sed 's/jammy/{{ distro }}/g' -i duckdb_ppa/debian/changelog
+
