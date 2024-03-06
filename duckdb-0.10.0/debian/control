@@ -14,7 +14,8 @@ Description: Embeddable SQL OLAP database management system
 Package: libduckdb
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: ${source:Synopsis}
+Description: Shared library distribution of DuckDB libraries
+ ${source:Synopsis}
 
 Package: libduckdb-static
 Architecture: any

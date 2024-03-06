@@ -16,8 +16,5 @@ You can also see more details on [launchpad](https://launchpad.net/~mause-me/+ar
 I'm currently working to resolve the following errors and warnings:
 
 ```
-E: duckdb: extended-description-is-empty
-E: libduckdb: extended-description-is-empty
-E: libduckdb-dev: extended-description-is-empty
 W: duckdb-dbgsym: elf-error In program headers: Unable to find program interpreter name [usr/lib/debug/.build-id/fe/4c3e6d151417731b83252ba2ef47ad06438b38.debug]
 ```
