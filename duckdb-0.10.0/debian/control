@@ -7,7 +7,7 @@ Homepage: https://duckdb.org
 Standards-Version: 4.6.0.1
 Vcs-Git: https://github.com/Mause/duckdb_ppa.git
 Vcs-Browser: https://github.com/Mause/duckdb_ppa
-Description: Embeddable SQL OLAP database management system.
+Description: Embeddable SQL OLAP database management system
  It is designed to be easy to install, with no external dependencies, and optimized for fast
  query performance. DuckDB is written in C++ and provides a SQL interface compliant with the SQL:2016 standard.
 
@@ -19,7 +19,7 @@ Description: ${source:Synopsis}
 Package: libduckdb-static
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Static distribution of DuckDB libraries.
+Description: Static distribution of DuckDB libraries
  ${source:Synopsis}
 
 Package: libduckdb-dev
@@ -31,5 +31,5 @@ Description: Headers for libduckdb.
 Package: duckdb
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Command line interface for DuckDB.
+Description: Command line interface for DuckDB
  ${source:Synopsis}
