@@ -22,7 +22,7 @@ jobs:
     - name: install deps
       run: |
         sudo apt update -y
-        sudo apt install devscripts ninja-build build-essential cmake dh-cmake
+        sudo apt install devscripts ninja-build build-essential cmake
 
     - name: Setup Ccache
       uses: hendrikmuhs/ccache-action@main
