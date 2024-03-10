@@ -1,8 +1,14 @@
+duckdb (0.10.0-30) jammy; urgency=medium
+
+  * correct maintainer value 
+  * bump standards version
+  * add upstream metadata file
+
+ -- Elliana May <me@mause.me>  Mon, 11 Mar 2024 12:43:16 +0800
+
 duckdb (0.10.0-29) jammy; urgency=medium
 
   * try to publish for multiple distros
-  * correct maintainer value 
-  * bump standards version
 
  -- Elliana May <me@mause.me>  Wed, 06 Mar 2024 15:41:26 +0800
 
