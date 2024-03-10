@@ -1,4 +1,4 @@
-duckdb (0.10.0+jammy29) jammy; urgency=medium
+duckdb (0.10.0-jammy29) jammy; urgency=medium
 
   * try to publish for multiple distros
 
