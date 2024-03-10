@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Elliana May <me@mause.me>
 Build-Depends: ninja-build, git, g++ (>= 5.0), cmake (>= 3.15), debhelper (>= 11)
 Homepage: https://duckdb.org
-Standards-Version: 4.6.0.1
+Standards-Version: 4.6.2
 Vcs-Git: https://github.com/Mause/duckdb_ppa.git
 Vcs-Browser: https://github.com/Mause/duckdb_ppa
 Description: Embeddable SQL OLAP database management system
