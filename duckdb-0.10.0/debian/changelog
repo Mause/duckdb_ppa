@@ -1,3 +1,9 @@
+duckdb (0.10.0-31) jammy; urgency=medium
+
+  * try to generate copyright file in correct format
+
+ -- Elliana May <me@mause.me>  Tue, 12 Mar 2024 01:01:49 +0800
+
 duckdb (0.10.0-30) jammy; urgency=medium
 
   * correct maintainer value 
