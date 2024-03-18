@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        duckdb_version: ['0.10.0']
+        duckdb_version: ['0.10.1']
 
     runs-on: ubuntu-latest
 
