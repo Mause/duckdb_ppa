@@ -23,18 +23,11 @@ Forwarded: <no|not-needed|url proving that it has been forwarded>
 Reviewed-By: <name and email of someone who approved the patch>
 Last-Update: 2024-02-20
 
---- duckdb-0.10.0.orig/CMakeLists.txt
-+++ duckdb-0.10.0/CMakeLists.txt
-@@ -292,7 +292,7 @@ endif()
- 
- string(REGEX MATCH ".*dev.*" DUCKDB_EXTENSION_FOLDER_IS_VERSION "${DUCKDB_VERSION}")
- 
--if(DUCKDB_EXTENSION_FOLDER_IS_VERSION AND DEFINED GIT_COMMIT_HASH)
-+if(DUCKDB_EXTENSION_FOLDER_IS_VERSION AND NOT GIT_COMMIT_HASH STREQUAL "")
-   set(DUCKDB_NORMALIZED_VERSION "${GIT_COMMIT_HASH}")
- else()
-   set(DUCKDB_NORMALIZED_VERSION "${DUCKDB_VERSION}")
-@@ -304,6 +304,10 @@ else()
+Index: duckdb-0.10.1/CMakeLists.txt
+===================================================================
+--- duckdb-0.10.1.orig/CMakeLists.txt
++++ duckdb-0.10.1/CMakeLists.txt
+@@ -321,6 +321,10 @@ else()
    set(EXTENSION_POSTFIX "duckdb_extension")
  endif()
  
@@ -45,8 +38,10 @@ Last-Update: 2024-02-20
  message(STATUS "git hash ${GIT_COMMIT_HASH}, version ${DUCKDB_VERSION}, extension folder ${DUCKDB_NORMALIZED_VERSION}")
  
  option(AMALGAMATION_BUILD
+Index: duckdb-0.10.1/doc/man/duckdb.1
+===================================================================
 --- /dev/null
-+++ duckdb-0.10.0/doc/man/duckdb.1
++++ duckdb-0.10.1/doc/man/duckdb.1
 @@ -0,0 +1,12 @@
 +.\" generated with Ronn-NG/v0.10.1
 +.\" http://github.com/apjanke/ronn-ng/tree/0.10.1
