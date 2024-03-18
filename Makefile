@@ -28,6 +28,8 @@ doc/man/duckdb.1: duckdb.1.md
 
 docs: doc/man/duckdb.1
 
+export OVERRIDE_GIT_DESCRIBE="0.10.1-4a89d97"
+
 deb:
 	cd $(FOLDER) && dpkg-buildpackage -us -uc
 
