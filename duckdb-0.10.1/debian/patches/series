@@ -1,8 +1,4 @@
 clean-slate-protocol
 add-more-options
-forget-me
 amend-man
-add-so-version
-override-version-manually
 correct-soversion-location
-add-git-commit-hash-again

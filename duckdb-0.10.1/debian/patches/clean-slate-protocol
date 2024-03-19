@@ -23,21 +23,6 @@ Forwarded: <no|not-needed|url proving that it has been forwarded>
 Reviewed-By: <name and email of someone who approved the patch>
 Last-Update: 2024-02-20
 
-Index: duckdb-0.10.1/CMakeLists.txt
-===================================================================
---- duckdb-0.10.1.orig/CMakeLists.txt
-+++ duckdb-0.10.1/CMakeLists.txt
-@@ -321,6 +321,10 @@ else()
-   set(EXTENSION_POSTFIX "duckdb_extension")
- endif()
- 
-+if (NOT DEFINED DUCKDB_NORMALIZED_VERSION)
-+  message(FATAL_ERROR "DUCKDB_NORMALIZED_VERSION not defined")
-+endif()
-+
- message(STATUS "git hash ${GIT_COMMIT_HASH}, version ${DUCKDB_VERSION}, extension folder ${DUCKDB_NORMALIZED_VERSION}")
- 
- option(AMALGAMATION_BUILD
 Index: duckdb-0.10.1/doc/man/duckdb.1
 ===================================================================
 --- /dev/null
