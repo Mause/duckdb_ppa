@@ -1,3 +1,9 @@
+duckdb (0.10.1-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Elliana May <me@mause.me>  Tue, 19 Mar 2024 01:21:15 +0800
+
 duckdb (0.10.0-jammy32) jammy; urgency=medium
 
   * declare python3 as build depends
