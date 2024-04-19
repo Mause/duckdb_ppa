@@ -7,6 +7,6 @@
 *.build
 *.ppa.upload
 
-duckdb-0.10.1/*
-!duckdb-0.10.1/debian
-duckdb-0.10.1/debian/.debhelper
+duckdb-0.10.2/*
+!duckdb-0.10.2/debian
+duckdb-0.10.2/debian/.debhelper

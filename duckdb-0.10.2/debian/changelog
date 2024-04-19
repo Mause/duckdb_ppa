@@ -1,3 +1,9 @@
+duckdb (0.10.2-jammy0) jammy; urgency=medium
+
+  * new upstream version
+
+ -- Elliana May <me@mause.me>  Fri, 19 Apr 2024 23:24:51 +0800
+
 duckdb (0.10.1-jammy0) jammy; urgency=medium
 
   * New upstream release.
