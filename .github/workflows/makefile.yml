@@ -9,8 +9,12 @@ jobs:
 
     strategy:
       matrix:
+
         release: [focal, jammy, mantic, noble]
-        duckdb_version: ['0.10.0']
+
+
+        duckdb_version: ['0.10.2']
+
 
     runs-on: ubuntu-latest
 
@@ -26,7 +30,7 @@ jobs:
     - name: install deps
       run: |
         sudo apt update -y
-        sudo apt install devscripts ninja-build build-essential cmake dh-cmake
+        sudo apt install devscripts ninja-build build-essential cmake debhelper
 
     - uses: taiki-e/install-action@just
 

@@ -1,4 +1,4 @@
-DUCKDB_VERSION = 0.10.0
+DUCKDB_VERSION = 0.10.2
 FOLDER = duckdb-$(DUCKDB_VERSION)
 
 .PHONY: all bump docs deb source_deb setup
@@ -28,8 +28,9 @@ doc/man/duckdb.1: duckdb.1.md
 
 docs: doc/man/duckdb.1
 
+
 deb:
-	cd $(FOLDER) && dpkg-buildpackage -us -uc
+	cd $(FOLDER) && dpkg-buildpackage -us -uc --sign-key=0x981A37FD852376FA
 
 source_deb:
-	cd $(FOLDER) && debuild -S -sa
+	cd $(FOLDER) && debuild -S -sa --sign-key=0x981A37FD852376FA
