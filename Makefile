@@ -1,4 +1,4 @@
-DUCKDB_VERSION = 0.10.2
+DUCKDB_VERSION = 1.0.0
 FOLDER = duckdb-$(DUCKDB_VERSION)
 
 .PHONY: all bump docs deb source_deb setup
