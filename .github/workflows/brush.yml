@@ -14,8 +14,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - run: |
-         sudo apt-get -y install lintian-brush
+      - run: sudo apt-get -y install lintian-brush
+      - name: config
+        run: |
+         mkdir "${HOME}/.config/"
+
+         # Set git user information
+         git config user.name "lintian"
+         git config user.email "dummy@example.com"
+      - name: run
+        run: |
          cd duckdb-*
          lintian-brush
       - name: Create pull request
