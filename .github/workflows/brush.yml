@@ -16,7 +16,7 @@ jobs:
       - name: Run lintian-brush
         uses: wanduow/action-lintian-brush@v1
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v6
         with:
           branch: lintian-brush/patch
           title: 'Update debian packaging'
