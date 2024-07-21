@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run lintian-brush
-        uses: wanduow/action-lintian-brush@v1
+        uses: gizmoguy/action-lintian-brush@v1
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
         with:
