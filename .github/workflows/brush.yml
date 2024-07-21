@@ -1,7 +1,6 @@
 name: Lintian-brush
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     # Schedule to run at midnight every day
