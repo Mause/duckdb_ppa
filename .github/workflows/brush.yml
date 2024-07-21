@@ -1,6 +1,7 @@
 name: Lintian-brush
 
 on:
+  push:
   workflow_dispatch:
   schedule:
     # Schedule to run at midnight every day
@@ -17,7 +18,7 @@ jobs:
       - run: sudo apt-get -y install lintian-brush
       - name: config
         run: |
-         mkdir "${HOME}/.config/"
+         mkdir "${HOME}/.config/" -p
 
          # Set git user information
          git config user.name "lintian"
