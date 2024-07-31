@@ -1,9 +1,13 @@
 duckdb (0.10.2-jammy2) UNRELEASED; urgency=medium
 
+  [  ]
   * Trim trailing whitespace.
   * Bump debhelper from old 11 to 13.
   * Set debhelper-compat version in Build-Depends.
   * Fix day-of-week for changelog entry 0.10.0-5.
+
+  [  ]
+  * Bump debhelper from old 12 to 13.
 
  --  <runner@fv-az1380-642.0iobsfatwvhuvgmqxjqze0bk2d.ex.internal.cloudapp.net>  Sun, 21 Jul 2024 08:06:57 -0000
 
