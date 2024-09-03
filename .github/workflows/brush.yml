@@ -27,7 +27,7 @@ jobs:
          cd duckdb-*
          lintian-brush
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           branch: lintian-brush/patch
           title: 'Update debian packaging'
