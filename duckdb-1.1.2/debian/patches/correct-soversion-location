@@ -14,9 +14,11 @@ Forwarded: <no|not-needed|url proving that it has been forwarded>
 Reviewed-By: <name and email of someone who approved the patch>
 Last-Update: 2024-02-29
 
---- duckdb-0.10.0.orig/src/CMakeLists.txt
-+++ duckdb-0.10.0/src/CMakeLists.txt
-@@ -89,6 +88,12 @@ else()
+Index: duckdb-1.1.2/src/CMakeLists.txt
+===================================================================
+--- duckdb-1.1.2.orig/src/CMakeLists.txt
++++ duckdb-1.1.2/src/CMakeLists.txt
+@@ -96,6 +96,12 @@ else()
  
    add_library(duckdb SHARED ${ALL_OBJECT_FILES})
    target_link_libraries(duckdb ${DUCKDB_LINK_LIBS})
