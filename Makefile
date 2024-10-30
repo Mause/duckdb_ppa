@@ -18,7 +18,7 @@ setup:
 
 bump:
 	git add -p
-	cd $(FOLDER) && dch --distribution jammy --upstream
+	cd $(FOLDER) && dch --distribution noble --upstream
 	git add $(FOLDER)/debian/changelog
 	cd $(FOLDER) && debcommit
 
