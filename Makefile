@@ -1,4 +1,4 @@
-DUCKDB_VERSION = 1.0.0
+DUCKDB_VERSION = 1.1.2
 FOLDER = duckdb-$(DUCKDB_VERSION)
 
 .PHONY: all bump docs deb source_deb setup
@@ -18,7 +18,7 @@ setup:
 
 bump:
 	git add -p
-	cd $(FOLDER) && dch --distribution jammy --upstream
+	cd $(FOLDER) && dch --distribution noble --upstream
 	git add $(FOLDER)/debian/changelog
 	cd $(FOLDER) && debcommit
 
