@@ -18,9 +18,9 @@ Index: duckdb-1.1.2/src/CMakeLists.txt
 ===================================================================
 --- duckdb-1.1.2.orig/src/CMakeLists.txt
 +++ duckdb-1.1.2/src/CMakeLists.txt
-@@ -96,6 +96,12 @@ else()
+@@ -133,6 +133,12 @@ else()
+   endif()
  
-   add_library(duckdb SHARED ${ALL_OBJECT_FILES})
    target_link_libraries(duckdb ${DUCKDB_LINK_LIBS})
 +  set_target_properties(
 +    duckdb
