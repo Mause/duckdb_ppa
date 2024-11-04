@@ -7,7 +7,7 @@ export DH_VERBOSE = 1
 
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DBUILD_EXTENSIONS="parquet;jemalloc;icu;json;autocomplete" -DOVERRIDE_GIT_DESCRIBE="v1.0.0-0-g1f98600c2c"
+	dh_auto_configure -- -DBUILD_EXTENSIONS="parquet;jemalloc;icu;json;autocomplete" -DOVERRIDE_GIT_DESCRIBE="v1.1.2-0-gf680b7d08f"
 
 
 override_dh_auto_test:
